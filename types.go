@@ -45,11 +45,15 @@ type Message struct {
 type Model string
 
 const (
-	ModelGpt3Turbo        Model = "gpt-3.5-turbo"
-	ModelGpt3Turbo16K0613 Model = "gpt-3.5-turbo-16k-0613"
-	ModelGpt3Turbo16K     Model = "gpt-3.5-turbo-16k"
-	ModelGpt3Turbo0613    Model = "gpt-3.5-turbo-0613"
-	ModelGpt3Turbo0301    Model = "gpt-3.5-turbo-0301"
+	ModelGpt3Turbo        Model = "gpt-3.5-turbo"          // ModelGpt3Turbo represents the GPT-3.5 Turbo model.
+	ModelGpt3Turbo16K0613 Model = "gpt-3.5-turbo-16k-0613" // ModelGpt3Turbo16K0613 represents the GPT-3.5 Turbo 16K 0613 model.
+	ModelGpt3Turbo16K     Model = "gpt-3.5-turbo-16k"      // ModelGpt3Turbo16K represents the GPT-3.5 Turbo 16K model.
+	ModelGpt3Turbo0613    Model = "gpt-3.5-turbo-0613"     // ModelGpt3Turbo0613 represents the GPT-3.5 Turbo 0613 model.
+	ModelGpt3Turbo0301    Model = "gpt-3.5-turbo-0301"     // ModelGpt3Turbo0301 represents the GPT-3.5 Turbo 0301 model.
+
+	ModelGpt4     Model = "gpt-4"      // ModelGpt4 represents the GPT-4 model.
+	ModelGpt40314 Model = "gpt-4-0314" // ModelGpt40314 represents the GPT-4 0314 model.
+	ModelGpt40613 Model = "gpt-4-0613" // ModelGpt40613 represents the GPT-4 0613 model.
 )
 
 // Role represents the different roles that can send messages in a conversation.
