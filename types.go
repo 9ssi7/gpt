@@ -10,6 +10,27 @@ type CompletionRequest struct {
 	PresencePenalty  float32   `json:"presence_penalty"`
 }
 
+type CompletionResponse struct {
+	Id      string     `json:"id"`
+	Object  string     `json:"object"`
+	Created int        `json:"created"`
+	Model   Model      `json:"model"`
+	Choices []Choice   `json:"choices"`
+	Usage   Completion `json:"usage"`
+}
+
+type Choice struct {
+	Index        int     `json:"index"`
+	Message      Message `json:"message"`
+	FinishReason string  `json:"finish_reason"`
+}
+
+type Completion struct {
+	PromptTokens     int `json:"prompt_tokens"`
+	CompletionTokens int `json:"completion_tokens"`
+	TotalTokens      int `json:"total_tokens"`
+}
+
 type Message struct {
 	Role    Role   `json:"role"`
 	Content string `json:"content"`
@@ -31,4 +52,10 @@ const (
 	RoleUser   Role = "user"
 	RoleBot    Role = "bot"
 	RoleSystem Role = "system"
+)
+
+type Object string
+
+const (
+	ObjectChatCompletion Object = "chat.completion"
 )
